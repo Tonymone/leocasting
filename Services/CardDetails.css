@@ -1,0 +1,28 @@
+/* CardDetails.css */
+.card-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #222;
+    text-align: center;
+  }
+  
+  .details-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .card-details p {
+    color: rgba(71, 71, 71, 0.849);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .card-details b {
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .card-details h1 {
+    color: rgb(255, 36, 80);
+  }

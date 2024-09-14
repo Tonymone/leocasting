@@ -1,0 +1,78 @@
+/* Default styles */
+.App {
+  text-align: center;
+}
+
+/* Header */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* General container for content */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Ensures it doesn't grow too large on big screens */
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  /* For tablets and smaller screens */
+  .App-header {
+      font-size: 16px;
+      padding: 15px;
+  }
+  
+  .container {
+      max-width: 90%; /* Shrinks the container a little */
+  }
+
+  /* Example for making elements stack instead of staying inline */
+  .card-header {
+      flex-direction: column; /* Stack icon and title */
+      align-items: center;
+  }
+  
+  .card {
+      margin: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* For mobile phones */
+  .App-header {
+      font-size: 14px;
+      padding: 10px;
+  }
+  
+  .container {
+      max-width: 95%;
+  }
+
+  /* Card adjustment for small screens */
+  .card {
+      margin: 10px 0;
+      padding: 10px;
+  }
+
+  .card-title {
+      font-size: 18px;
+  }
+}
