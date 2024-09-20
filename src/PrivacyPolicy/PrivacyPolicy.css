@@ -1,24 +1,178 @@
 /* src/components/PrivacyPolicy.css */
 
 .privacy-policy-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    line-height: 1.6;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #cbebff 50%, #a1dbff 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+  font-family: 'Roboto', sans-serif;
+  overflow-y: auto;
+  height: auto;
+  /* To make the container more flexible */
+  animation: fadeInContainer 0.8s ease-in-out;
 }
 
-.privacy-policy-container h1, h2 {
-    text-align: left;
-    color: #333;
-    margin: 0;
+/* Fade-in animation for the container */
+@keyframes fadeInContainer {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .privacy-policy-container p {
-    color: #555;
-    margin-bottom: 15px;
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  p ul {
-    padding-left: 20px;
-    list-style: none;
+}
+
+.privacy-policy-container h1,
+h2 {
+  text-align: left;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  position: relative;
+  animation: fadeInHeader 1s ease-in-out;
+}
+
+/* Sliding and fading effect for headers */
+@keyframes fadeInHeader {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
   }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.privacy-policy-container h1::after,
+.privacy-policy-container h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #2c3e50;
+  margin-top: 10px;
+  animation: expandLine 0.5s ease;
+}
+
+/* Expanding underline animation */
+@keyframes expandLine {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 60px;
+  }
+}
+
+.privacy-policy-container p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  animation: fadeInParagraph 1.2s ease-in-out;
+}
+
+/* Fade-in animation for paragraphs */
+@keyframes fadeInParagraph {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.privacy-policy-container ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #34495e;
+  margin-bottom: 20px;
+  animation: fadeInList 1.3s ease-in-out;
+}
+
+/* Smooth fade-in effect for lists */
+@keyframes fadeInList {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.privacy-policy-container ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  animation: slideInListItem 0.4s ease forwards;
+}
+
+/* Slide-in for individual list items */
+@keyframes slideInListItem {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.privacy-policy-container ul li::before {
+  content: '•';
+  color: #2c3e50;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: none;
+  /* Hidden initially */
+  animation: fadeInButton 0.5s ease;
+}
+
+/* Button fade-in effect */
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Show button when user scrolls down */
+.privacy-policy-container.scrolled .scroll-to-top {
+  display: block;
+}
+
+/* Smooth scroll effect for the page */
+html {
+  scroll-behavior: smooth;
+}

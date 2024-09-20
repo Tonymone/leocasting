@@ -3,9 +3,19 @@ body {
     margin: 0;
     padding: 0;
     color: #eee;
-    /* background-color: #222; */
     font-size: 16px;
     line-height: 1.7;
+}
+
+/* Fade-in animation for header */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .header1 {
@@ -19,18 +29,30 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 1.5rem; /* Added padding for smaller screen margins */
+    padding: 0 1.5rem;
+    animation: fadeIn 2s ease-in-out;
+    /* Adding fade-in animation */
 }
 
-.text-box {
-    color: black;
-    padding: 0 1rem; /* Added padding for smaller screen margins */
+/* Slide-in from the left for the primary text */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .heading-primary {
     display: grid;
     text-transform: uppercase;
     margin-bottom: 20px;
+    animation: slideInLeft 1.5s ease-out;
+    /* Slide-in animation */
 }
 
 .heading-primary-main {
@@ -47,6 +69,26 @@ body {
     color: rgba(35, 35, 35, 0.826);
 }
 
+/* Bounce-in effect for buttons */
+@keyframes bounceIn {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
 .btn {
     text-transform: uppercase;
     text-decoration: none;
@@ -57,23 +99,28 @@ body {
     color: #fff;
     background-color: #af0505;
     font-size: 1.2rem;
+    animation: bounceIn 1.2s ease;
+    /* Adding bounce-in animation */
 }
 
+/* Hover animation for buttons */
 .btn:hover {
     background-color: #d83a3a;
-    transform: translateY(-3px);
+    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    /* Smooth transition */
 }
 
 .btn:active {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Media Queries for responsiveness */
 @media (max-width: 1200px) {
     .header1 {
-        height: 80vh; /* Adjust height on smaller screens */
+        height: 80vh;
     }
 
     .heading-primary-main {

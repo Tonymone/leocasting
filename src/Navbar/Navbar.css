@@ -15,12 +15,14 @@ body {
     padding: 10px 20px;
     position: relative;
     z-index: 1000;
-    transition: height 0.3s ease; /* Smooth transition for height changes */
+    transition: height 0.3s ease;
+    /* Smooth transition for height changes */
 }
 
 /* Ensure the header expands when nav is opened */
 .header.expanded {
-    height: auto; /* Set to auto to allow for expanding content */
+    height: auto;
+    /* Set to auto to allow for expanding content */
 }
 
 .navbar {
@@ -44,8 +46,10 @@ body {
     display: none;
     cursor: pointer;
     position: absolute;
-    top: 25px; /* Fix at the top */
-    right: 20px; /* Fix at the right */
+    top: 25px;
+    /* Fix at the top */
+    right: 20px;
+    /* Fix at the right */
 }
 
 .nav-toggle-label span {
@@ -92,9 +96,10 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .navbar{
+    .navbar {
         align-items: baseline;
     }
+
     /* Hide the desktop navigation links */
     .nav-links {
         position: relative;
@@ -105,16 +110,17 @@ body {
         align-items: center;
         justify-content: space-around;
         display: none;
-        transition: height 0.3s ease; /* Smooth height transition */
+        transition: height 0.3s ease;
+        /* Smooth height transition */
     }
 
     /* When nav-toggle is checked, show the nav links and adjust header */
-    .nav-toggle:checked ~ .nav-links {
+    .nav-toggle:checked~.nav-links {
         display: flex;
     }
 
     /* Ensure the header expands when the menu is opened */
-    .nav-toggle:checked ~ .header {
+    .nav-toggle:checked~.header {
         height: auto;
     }
 
@@ -136,7 +142,8 @@ body {
 
     .nav-toggle-label {
         display: block;
-        z-index: 2000; /* Ensures the label stays on top */
+        z-index: 2000;
+        /* Ensures the label stays on top */
     }
 
     .nav-toggle-label span {
@@ -162,16 +169,15 @@ body {
     }
 
     /* Change the burger menu into an 'X' when checked */
-    .nav-toggle:checked + .nav-toggle-label span {
+    .nav-toggle:checked+.nav-toggle-label span {
         transform: rotate(45deg);
     }
 
-    .nav-toggle:checked + .nav-toggle-label span::before {
+    .nav-toggle:checked+.nav-toggle-label span::before {
         transform: rotate(90deg) translateX(0px);
     }
 
-    .nav-toggle:checked + .nav-toggle-label span::after {
+    .nav-toggle:checked+.nav-toggle-label span::after {
         transform: rotate(90deg) translateX(0px);
     }
 }
-

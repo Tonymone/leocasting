@@ -4,76 +4,76 @@ import styled, { keyframes, css } from "styled-components";
 import { NavLink } from "react-router-dom";
 
 function Home() {
-    const row1 = [
-        "https://1000logos.net/wp-content/uploads/2021/08/Reliance-Industries-Limited-RIL-Logo-1966.png",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5JrgUSvtHTVukrRBiq2dIvLGuoTKRkb6VfwvurpbX_Q&s",
-        "https://www.propmart.co/wp-content/uploads/2019/07/runwal-logo.png",
-        "https://mir-s3-cdn-cf.behance.net/projects/404/b4a16a151761919.Y3JvcCw5MDAsNzAzLDAsOTg.jpg",
-        "https://logolook.net/wp-content/uploads/2023/09/Colgate-Logo.png",
-        "https://www.nurseryrhymesnursery.co.uk/img/logo-trans.png",
-    ];
+  const row1 = [
+    "https://1000logos.net/wp-content/uploads/2021/08/Reliance-Industries-Limited-RIL-Logo-1966.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5JrgUSvtHTVukrRBiq2dIvLGuoTKRkb6VfwvurpbX_Q&s",
+    "https://www.propmart.co/wp-content/uploads/2019/07/runwal-logo.png",
+    "https://mir-s3-cdn-cf.behance.net/projects/404/b4a16a151761919.Y3JvcCw5MDAsNzAzLDAsOTg.jpg",
+    "https://logolook.net/wp-content/uploads/2023/09/Colgate-Logo.png",
+    "https://www.nurseryrhymesnursery.co.uk/img/logo-trans.png",
+  ];
 
-    const row2 = [
-        "https://images.news18.com/ibnlive/uploads/2021/12/iqoo.jpg",
-        "https://pbs.twimg.com/profile_images/1336630471317286912/m1E6fhoz_400x400.jpg",
-        "https://logowik.com/content/uploads/images/t-series3119.logowik.com.webp",
-        "https://www.itchotels.com/content/dam/itchotels/in/umbrella/images/ITCs%20Hotel%20Group.png",
-        "https://upload.wikimedia.org/wikipedia/commons/0/0d/Tira_logo.webp",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1280px-Logo_of_YouTube_%282015-2017%29.svg.png"
-    ];
+  const row2 = [
+    "https://images.news18.com/ibnlive/uploads/2021/12/iqoo.jpg",
+    "https://pbs.twimg.com/profile_images/1336630471317286912/m1E6fhoz_400x400.jpg",
+    "https://logowik.com/content/uploads/images/t-series3119.logowik.com.webp",
+    "https://www.itchotels.com/content/dam/itchotels/in/umbrella/images/ITCs%20Hotel%20Group.png",
+    "https://upload.wikimedia.org/wikipedia/commons/0/0d/Tira_logo.webp",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1280px-Logo_of_YouTube_%282015-2017%29.svg.png"
+  ];
 
-    return (
-        <>
-            <header className="header1">
-                <div className="text-box">
-                    <h1 className="heading-primary">
-                        <span className="heading-primary-main">Get cast in your next role today.</span>
-                        <span className="heading-primary-sub">LeoCasting has the most jobs, the best tools, and expert advice to help you get cast.</span>
-                    </h1>
-                    <NavLink to="/audition-form" className="btn">Get Started</NavLink>
-                </div>
-            </header>
+  return (
+    <>
+      <header className="header1">
+        <div className="text-box">
+          <h1 className="heading-primary">
+            <span className="heading-primary-main">Get cast in your next role today.</span>
+            <span className="heading-primary-sub">LeoCasting has the most jobs, the best tools, and expert advice to help you get cast.</span>
+          </h1>
+          <NavLink to="/audition-form" className="btn">Get Started</NavLink>
+        </div>
+      </header>
 
-            <BrandContainer>
-                <Wrapper>
-                    <Text>With Great Outcomes.</Text>
-                    <Note>Our customers have gotten offers from awesome companies.</Note>
-                    <Marquee>
-                        <MarqueeGroup>
-                            {row1.map((el) => (
-                                <ImageGroup key={el}>
-                                    <Image src={el} />
-                                </ImageGroup>
-                            ))}
-                        </MarqueeGroup>
-                        <MarqueeGroup>
-                            {row1.map((el) => (
-                                <ImageGroup key={el}>
-                                    <Image src={el} />
-                                </ImageGroup>
-                            ))}
-                        </MarqueeGroup>
-                    </Marquee>
-                    <Marquee>
-                        <MarqueeGroup2>
-                            {row2.map((el) => (
-                                <ImageGroup key={el}>
-                                    <Image src={el} />
-                                </ImageGroup>
-                            ))}
-                        </MarqueeGroup2>
-                        <MarqueeGroup2>
-                            {row2.map((el) => (
-                                <ImageGroup key={el}>
-                                    <Image src={el} />
-                                </ImageGroup>
-                            ))}
-                        </MarqueeGroup2>
-                    </Marquee>
-                </Wrapper>
-            </BrandContainer>
-        </>
-    );
+      <BrandContainer>
+        <Wrapper>
+          <Text>With Great Outcomes.</Text>
+          <Note>Our customers have gotten offers from awesome companies.</Note>
+          <Marquee>
+            <MarqueeGroup>
+              {row1.map((el) => (
+                <ImageGroup key={el}>
+                  <Image src={el} />
+                </ImageGroup>
+              ))}
+            </MarqueeGroup>
+            <MarqueeGroup>
+              {row1.map((el) => (
+                <ImageGroup key={el}>
+                  <Image src={el} />
+                </ImageGroup>
+              ))}
+            </MarqueeGroup>
+          </Marquee>
+          <Marquee>
+            <MarqueeGroup2>
+              {row2.map((el) => (
+                <ImageGroup key={el}>
+                  <Image src={el} />
+                </ImageGroup>
+              ))}
+            </MarqueeGroup2>
+            <MarqueeGroup2>
+              {row2.map((el) => (
+                <ImageGroup key={el}>
+                  <Image src={el} />
+                </ImageGroup>
+              ))}
+            </MarqueeGroup2>
+          </Marquee>
+        </Wrapper>
+      </BrandContainer>
+    </>
+  );
 }
 
 const BrandContainer = styled.div`
@@ -110,7 +110,7 @@ const Text = styled.div`
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 10px;
-  color: wheat;
+  color: red;
   text-align: center;
 
   @media (max-width: 768px) {

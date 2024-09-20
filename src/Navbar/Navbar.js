@@ -11,11 +11,11 @@ function Navbar() {
                     <span></span>
                 </label>
                 <ul className="nav-links">
-                    <li><NavLink to="/" exact activeClassName="active">Home</NavLink></li>
-                    <li><NavLink to="/about" activeClassName="active">About</NavLink></li>
-                    <li><NavLink to="/services" activeClassName="active">Services</NavLink></li>
-                    <li><NavLink to="/contact" activeClassName="active">Contact</NavLink></li>
-                    <li><NavLink to="/audition-form" activeClassName="active">Audition Form</NavLink></li>
+                    <li><NavLink to="/" exact="true" activeclassname="active">Home</NavLink></li>
+                    <li><NavLink to="/about" activeclassname="active">About</NavLink></li>
+                    <li><NavLink to="/services" activeclassname="active">Services</NavLink></li>
+                    <li><NavLink to="/contact" activeclassname="active">Contact</NavLink></li>
+                    <li><NavLink to="/audition-form" activeclassname="active">Audition Form</NavLink></li>
                 </ul>
             </nav>
         </header>
